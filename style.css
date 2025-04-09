@@ -1,0 +1,80 @@
+.div-container {
+  width: 60%;
+  margin: auto;
+  background-color: aqua;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .div-container {
+    width: 80%;
+    background-color: gray;
+  }
+
+  body {
+    background-color: lightblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: lightpink;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.item {
+  background-color: lightgreen;
+  padding: 20px;
+  flex: 1; /* Flex-grow, flex-shrink, flex-basis */
+  margin: 10px;
+}
+
+.link-container {
+  font-style: italic;
+}
+.link-container :hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: red;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "Header Header Header" "Menu Main Right" "Footer Footer Footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-item1 {
+  grid-area: Header;
+  background-color: lightblue;
+}
+.grid-item2 {
+  grid-area: Menu;
+  background-color: lightgreen;
+}
+.grid-item3 {
+  grid-area: Main;
+  background-color: lightpink;
+}
+.grid-item4 {
+  grid-area: Right;
+  background-color: lightgreen;
+}
+.grid-item5 {
+  grid-area: Footer;
+  background-color: lightsteelblue;
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: "Header" "Main" "Menu" "Right" "Footer";
+  }
+}
